@@ -16,7 +16,13 @@ const InputView = {
   },
 
   readRestart() {
-    Console.readLine(this.READ_RESTART_PHRASE, (input) => {});
+    Console.readLine(this.READ_RESTART_PHRASE, (input) => {
+        try {
+            Validator.validateRestart(input);
+          } catch (error) {
+            Console.print(error.message);
+          }
+    });
   },
 };
 
