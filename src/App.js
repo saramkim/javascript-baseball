@@ -1,3 +1,4 @@
+const { Console } = require('@woowacourse/mission-utils');
 const BaseballGame = require('./model/BaseballGame');
 const AnswerMaker = require('./utils/AnswerMaker');
 const ResultPhraseMaker = require('./utils/ResultPhraseMaker');
@@ -28,6 +29,7 @@ class App {
 
   end(input) {
     if (input === Validator.RESTART_NUMBER) this.play();
+    if (input === Validator.QUIT_NBUMBER) Console.close();
   }
 }
 
