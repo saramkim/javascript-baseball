@@ -15,6 +15,7 @@ const InputView = {
   readRestart(app) {
     Console.readLine(this.READ_RESTART_PHRASE, (input) => {
       Validator.validateRestart(input);
+      app.end(input);
     });
   },
 };

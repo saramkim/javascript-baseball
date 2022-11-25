@@ -1,6 +1,7 @@
 const BaseballGame = require('./model/BaseballGame');
 const AnswerMaker = require('./utils/AnswerMaker');
 const ResultPhraseMaker = require('./utils/ResultPhraseMaker');
+const Validator = require('./utils/Validator');
 const InputView = require('./view/InputView');
 const OutputView = require('./view/OutputView');
 
@@ -23,6 +24,10 @@ class App {
       OutputView.printComplete();
       InputView.readRestart(this);
     } else InputView.readAnswer(this);
+  }
+
+  end(input) {
+    if (input === Validator.RESTART_NUMBER) this.play();
   }
 }
 
