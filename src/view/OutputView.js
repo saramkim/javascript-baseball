@@ -6,6 +6,10 @@ const OutputView = {
   printStart() {
     Console.print(this.START_PHRASE);
   },
+
+  printResult(resultPhrase) {
+    Console.print(resultPhrase);
+  },
 };
 
 module.exports = OutputView;
